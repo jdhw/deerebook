@@ -4,6 +4,7 @@ import logo from './logo.svg';
 import './App.css';
 
 import Profile from './components/Profile';
+import FriendsPage from './components/FriendsPage';
 
 class App extends Component {
 
@@ -14,8 +15,8 @@ class App extends Component {
       user: {
         name: "Hema Waychal",
         username: "Hema",
-        image: "",
-        friendList: []
+        image: "https://images.pexels.com/photos/736230/pexels-photo-736230.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        friendList: ["Mayura", "Vidhu"]
       },
       apiDataLoaded: false,
       potentialFriends: []
@@ -26,7 +27,8 @@ class App extends Component {
   return (
     <div className="App">
       <h1>HemaBook</h1>
-      <Profile />
+      <Profile user={this.state.user}/>
+      <FriendsPage />
     </div>
   );
   }
